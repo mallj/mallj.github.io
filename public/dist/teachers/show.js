@@ -1,0 +1,1 @@
+define("/dist/teachers/show",["jquery","template"],function(e,t,a){var r=e("jquery"),c=e("template"),i=r("#teacherModal");r("#teacherList").on("click","a.preview",function(){var e=r(this).attr("data-id");return r.ajax({url:"/teacher/preview",type:"post",data:{tc_id:e},success:function(e){var t=c("teacherTpl",e);i.find("table").append(t),i.modal()}}),!1})});
